@@ -36,6 +36,8 @@ If all else fails, check the documentation [here](https://laravel.com/docs/8.x/)
        - [Avoiding N + 1](#avoiding-n--1)
 
        - [Soft Deleting](#soft-deleting)
+       
+       - [File Systems](#filesystem-support)
 
    - [Security](#security)
 
@@ -74,6 +76,7 @@ If all else fails, check the documentation [here](https://laravel.com/docs/8.x/)
    - [Debugging](#debugging)
 
    - [Misc.](#misc)
+        - [SEO](#SEO)
 
 ## Best Practices
 Information on best practices in Laravel can be found [here](https://www.laravelbestpractices.com/).
@@ -144,6 +147,9 @@ Instead of doing one query for every iteration, eager loading bundles these quer
 Normally when you run a DELETE statement in a database, the data's gone.
 
 With the soft delete design pattern, you add a bit column like IsDeleted, IsActive, or IsArchived to the table, and instead of deleting rows, you flip the bit column. [more info](https://www.brentozar.com/archive/2020/02/what-are-soft-deletes-and-how-are-they-implemented/)
+
+#### Filesystem Support
+Laravel provides a powerful filesystem abstraction thanks to the wonderful [Flysystem](https://github.com/thephpleague/flysystem) PHP package by Frank de Jonge. The Laravel Flysystem integration provides simple drivers for working with local filesystems, SFTP, and Amazon S3. [more info](https://laravel.com/docs/8.x/filesystem)
 
 ## Security
 
@@ -224,3 +230,6 @@ Here's a list of things you can check if you're getting errors, it's normally ea
 - Is something misspelled?
 
 ## Misc.
+
+#### SEO
+Laravel has tools to help optimize your pages meta tags to help with [Search Engine Optimization](https://medium.com/@davmixcool/how-to-improve-seo-in-laravel-applications-with-laravel-meta-manager-d2f6bc471e12).
